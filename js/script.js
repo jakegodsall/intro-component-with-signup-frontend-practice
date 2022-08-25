@@ -19,24 +19,45 @@ form.addEventListener('submit', function (e) {
     console.log(elements);
 
     elements.forEach(function (element) {
-        if (element.value == '' && element.type !== 'submit') {
-            emptyInput(element);
-        } else {
-
+        if (element.id == 'email-address') {
+            isEmpty(element);
+            isEmail(element);
         }
+        isEmpty(element);
+
+
     });
 
     e.preventDefault();
 });
 
-function emptyInput(inputElement) {
+function appendErrorMessage(inputElement, message) {
     const formRow = inputElement.parentNode;
 
-    if (formRow.children.length == 1) {
-        const p = document.createElement('p');
-        p.classList.add('error');
-        p.innerText = `${inputElement.placeholder} cannot be empty`;
-        formRow.appendChild(p);
-    }
+    const p = document.createElement('p');
+    p.classList.add('error');
+    p.innerText = message;
 
+    if (formRow.children.length === 1 && inputElement.type !== 'submit') {
+        // if empty, show error message
+        formRow.appendChild(p);
+    } else if (formRow.children.length !== 1) {
+        // remove error message if input has been added
+        formRow.removeChild(formRow.lastElementChild);
+    }
+}
+
+
+function isEmpty(inputElement) {
+    if (inputElement.value === '') {
+        appendErrorMessage(inputElement, `${inputElement.placeholder} cannot be empty`);
+    }
+}
+
+function isEmail(inputElement) {
+    const regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+
+    if (!regex.test(inputElement)) {
+        appendErrorMessage(inputElement, 'Looks like this is not an email');
+    }
 }
