@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sources":["../sass/abstracts/_variables.scss","../sass/base/_reset.scss","../sass/base/_typography.scss"],"names":[],"mappings":"AAAA,MACI,iBAAA,CACA,+BAAA,CACA,+BAAA,CACA,0BAAA,CACA,2BAAA,CACA,wBAAA,CCNJ,MACI,qBAAA,CACA,0BAAA,CAGJ,KACI,QAAA,CCNJ,MACI,gCAAA,CAGJ,GACI,eAAA","file":"main.css"}
