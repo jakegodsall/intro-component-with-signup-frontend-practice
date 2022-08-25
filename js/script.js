@@ -11,13 +11,11 @@ form.addEventListener('submit', function (e) {
     const elements = Array.from(form.elements);
 
     elements.forEach(function (element) {
-        // add to session storage
+
         isEmpty(element);
         if (element.id == 'email-address') {
             isEmail(element);
         }
-
-
         addToSessionStorage(element);
     });
 
