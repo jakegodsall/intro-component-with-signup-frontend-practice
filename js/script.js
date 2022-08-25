@@ -5,10 +5,6 @@ const lastName = document.getElementById('last-name');
 const email = document.getElementById('email-address');
 const password = document.getElementById('password');
 
-function isEmpty() {
-
-}
-
 console.log(form);
 
 form.addEventListener('submit', function (e) {
@@ -19,13 +15,14 @@ form.addEventListener('submit', function (e) {
     console.log(elements);
 
     elements.forEach(function (element) {
+        // add to session storage
         if (element.id == 'email-address') {
             isEmpty(element);
             isEmail(element);
         }
         isEmpty(element);
 
-
+        addToSessionStorage(element);
     });
 
     e.preventDefault();
@@ -60,4 +57,9 @@ function isEmail(inputElement) {
     if (!regex.test(inputElement)) {
         appendErrorMessage(inputElement, 'Looks like this is not an email');
     }
+}
+
+function addToSessionStorage(inputElement) {
+
+    sessionStorage.setItem(inputElement.id, inputElement.value);
 }
