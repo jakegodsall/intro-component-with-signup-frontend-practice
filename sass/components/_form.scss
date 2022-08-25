@@ -6,8 +6,6 @@
     align-items: center;
     justify-content: space-between;
 
-
-
     .offer {
         text-align: center;
         width: 100%;
@@ -41,6 +39,16 @@
                 border: 1px solid #ccc;
             }
 
+            .error {
+                color: var(--red);
+                font-size: .7rem;
+                text-align: right;
+                font-weight: 500;
+                font-style: italic;
+                margin: 0;
+                margin-bottom: 5px;
+            }
+
             ::placeholder {
                 font-weight: 700;
             }
@@ -55,6 +63,7 @@
                 border: none;
                 border-radius: 5px;
                 box-shadow: 0 10px 5px -5px rgb(86, 151, 86);
+                margin-top: 10px;
                 margin-bottom: 20px;
                 cursor: pointer;
                 transition: transform .1s ease-in;
@@ -63,8 +72,6 @@
             .submit:hover {
                 transform: translateY(2px);
             }
-
-
         }
 
         box-shadow: 0 10px 5px -5px var(--red-shadow);
@@ -75,8 +82,6 @@
         color: var(--red);
         font-weight: 700;
     }
-
-
 }
 
 
