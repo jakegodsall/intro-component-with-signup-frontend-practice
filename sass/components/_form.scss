@@ -1,19 +1,31 @@
 .grid__form {
-    background-color: #fff;
-    border-radius: 20px;
+
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
-    box-shadow: 0 10px 5px -5px var(--red-shadow);
+
+
+
+    .offer {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        background-color: var(--blue);
+        padding: 20px 75px;
+        border-radius: 10px;
+        box-shadow: 0px 12px 5px -5px var(--red-shadow);
+    }
 
     form {
+        padding: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+
+        background-color: #fff;
+        border-radius: 20px;
 
 
         .form-row {
@@ -52,6 +64,8 @@
 
 
         }
+
+        box-shadow: 0 10px 5px -5px var(--red-shadow);
 
     }
 
