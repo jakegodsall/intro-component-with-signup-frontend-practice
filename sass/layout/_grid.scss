@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     margin: 25px;
-    width: 90%;
+    width: min(90%, 400px);
 
     &__text {
         text-align: center;
