@@ -16,7 +16,6 @@ form.addEventListener('submit', function (e) {
         if (element.id == 'email-address') {
             isEmail(element);
         }
-        addToSessionStorage(element);
     });
 
     e.preventDefault();
@@ -39,11 +38,11 @@ function showError(inputElement, message) {
     p.classList.add('error-msg');
     p.innerText = message;
 
+
     if (formRow.children.length === 1 && inputElement.type !== 'submit') {
         // add error class to inputElement
         inputElement.classList.add('error');
-        // remove placeholder
-        inputElement.placeholder = '';
+
         // if empty, show error message
         formRow.appendChild(p);
     }
@@ -66,7 +65,3 @@ function isEmail(inputElement) {
     }
 }
 
-function addToSessionStorage(inputElement) {
-
-    sessionStorage.setItem(inputElement.id, inputElement.value);
-}
