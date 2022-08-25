@@ -40,6 +40,14 @@
             }
 
             .error {
+                border-color: var(--red);
+                background-image: url('../../images/icon-error.svg');
+                background-position: 95%;
+                background-repeat: no-repeat;
+
+            }
+
+            .error-msg {
                 color: var(--red);
                 font-size: .7rem;
                 text-align: right;
@@ -47,6 +55,7 @@
                 font-style: italic;
                 margin: 0;
                 margin-bottom: 5px;
+
             }
 
             ::placeholder {
