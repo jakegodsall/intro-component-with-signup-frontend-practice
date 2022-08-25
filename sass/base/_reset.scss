@@ -1,8 +1,17 @@
 :root {
     box-sizing: border-box;
-    font-size: var(--font-size);
+}
+
+* {
+    box-sizing: inherit;
 }
 
 body {
     margin: 0;
+}
+
+a,
+a:active,
+a:visited {
+    text-decoration: none;
 }
